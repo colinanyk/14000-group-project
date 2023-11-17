@@ -1,3 +1,5 @@
+package EncodeDecode;
+
 public class CypherMessage {
     private String key;
     private String message;
@@ -12,7 +14,7 @@ public class CypherMessage {
 
     public String getMessage() {
         return this.message;
-    }
+    } 
 
     public void setMessage(String message) {
         this.message = message;
