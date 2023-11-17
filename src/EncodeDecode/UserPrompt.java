@@ -13,10 +13,25 @@ public class UserPrompt {
       System.out.println("Input cypher key: ");
       String userKey = userInput.nextLine();
 
-      cm.setKey(userKey);
-      cm.setMessage(userMessage);
+      System.out.println("Do you want to encode or decode?");
+      String userAction = userInput.nextLine();
 
-      System.out.printf("Message: %s%n", cm.getMessage());
-      System.out.printf("Key: %s%n", cm.getKey());
+      String outputtedMessage;
+
+      cm.setMessage(userMessage);
+      cm.setKey(userKey);
+
+      // TODO: This should be replaced with a while loop to check if the user has put in a valid action; encode or decode only.
+      if (userAction.equalsIgnoreCase(cm.ACTION_ENCODE)) {
+         Encode encode = new Encode();
+         outputtedMessage = encode.encodeMessage(cm);
+      } else if (userAction.equalsIgnoreCase(cm.ACTION_DECODE)) {
+         Decode decode = new Decode();
+         outputtedMessage = decode.decodeMessage(cm);
+      } else {
+         outputtedMessage = "Did not put in a valid message";
+      }
+
+      System.out.printf("Output Message: %s%n", outputtedMessage);
    }
 }

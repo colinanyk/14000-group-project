@@ -4,6 +4,9 @@ public class CypherMessage {
     private String key;
     private String message;
 
+    public final String ACTION_DECODE = "decode";
+    public final String ACTION_ENCODE = "encode";
+
     public String getKey() {
         return this.key;
     }
