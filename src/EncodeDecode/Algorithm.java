@@ -15,7 +15,7 @@ public class Algorithm {
          char[] cArray = cypherMessage.getMessage().toCharArray(); //convert message to char array
     
          int range = 255; //0 to 255 ascii range, wont throw errors;
-         int rand; 
+         int rand; //this will be the integer created from the random key used to adjust the ascii values
          Random randomize = new Random();
          randomize.setSeed(key); //sets random pattern with key value
     
@@ -31,10 +31,10 @@ public class Algorithm {
          
          //convert char array back to string
          String str = String.copyValueOf(cArray);
-         cypherMessage.setMessage(str);
+         cypherMessage.setMessage(str); //str string is thrown to setMessage in cypherMessage class and replaces former string that was just altered.
         }
 
-        if (action.equals(cypherMessage.ACTION_DECODE)) {
+        if (action.equals(cypherMessage.ACTION_DECODE)) { //Process here for decoding will work similarly as above, just in the opposite order. Still a few kinks setting random key but have it nearly working.
             System.out.println("DECODE Algorithmize");
         }
 
