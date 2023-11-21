@@ -24,16 +24,14 @@ public class Algorithm {
          rand = (int)(randomize.nextInt(range)); 
          
          for(i=0; i < cArray.length ;i++){
-         cArray[i] = (char) (cArray[i] + rand);
-         System.out.print(cArray[i]);
+            cArray[i] = (char) (cArray[i] + rand);
          }
          
          // algorithm jumbling process ends here
          
          //convert char array back to string
          String str = String.copyValueOf(cArray);
-         cypherMessage.setMessage(str); //!!!!!!THIS NEEEDS TO BE TESTED!!!!!!!!! String str is the final encoded message, unsure how to return it properly
-     
+         cypherMessage.setMessage(str);
         }
 
         if (action.equals(cypherMessage.ACTION_DECODE)) {
