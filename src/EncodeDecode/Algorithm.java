@@ -1,5 +1,7 @@
 package EncodeDecode;
 
+import java.util.Random;
+
 public class Algorithm {
 
     public String algorithmize(CypherMessage cypherMessage, String action) {
@@ -10,7 +12,7 @@ public class Algorithm {
          //encode algorithm process starts here, edited 11/19/2023 
          int i;
          int key = 63134133; //key needs to integer, for now. No quick or simple way of converting string phrases to an integer.
-         char[] cArray = cypherMessage.toCharArray(); //convert message to char array
+         char[] cArray = cypherMessage.getMessage().toCharArray(); //convert message to char array
     
          int range = 255; //0 to 255 ascii range, wont throw errors;
          int rand; 
@@ -30,7 +32,7 @@ public class Algorithm {
          
          //convert char array back to string
          String str = String.copyValueOf(cArray);
-         cypherMessage.setMessage(str);                    //!!!!!!THIS NEEEDS TO BE TESTED!!!!!!!!! String str is the final encoded message, unsure how to return it properly
+         cypherMessage.setMessage(str); //!!!!!!THIS NEEEDS TO BE TESTED!!!!!!!!! String str is the final encoded message, unsure how to return it properly
      
         }
 
@@ -38,6 +40,6 @@ public class Algorithm {
             System.out.println("DECODE Algorithmize");
         }
 
-        return String.format("key: %s algorithmize message: %s%n", cypherMessage.getKey() ,cypherMessage.getMessage(), action);
+        return cypherMessage.getMessage();
     }
 }

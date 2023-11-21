@@ -3,7 +3,7 @@ package EncodeDecode;
 import java.util.Scanner;
 
 public class UserPrompt {
-   public void startProgram() {
+   public String startProgram() {
       Scanner userInput = new Scanner(System.in);
       CypherMessage cm = new CypherMessage();
 
@@ -32,6 +32,6 @@ public class UserPrompt {
          outputtedMessage = "Did not put in a valid message";
       }
 
-      System.out.printf("Output Message: %s%n", outputtedMessage);
+      return outputtedMessage;
    }
 }
