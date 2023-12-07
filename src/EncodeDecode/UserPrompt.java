@@ -29,7 +29,7 @@ public class UserPrompt {
       // Do while loop to enforce the values "encode" or "decode" to be entered for userAction
       do {
          // Output message to prompt a user to enter a what action they would like to perform, encode or decode
-         System.out.println("Do you want to encode or decode?!");
+         System.out.println("Please enter either \"encode\" or \"decode\" depending on which action you would like to perform. ");
          // Prompt user to enter action, encode or decode
          userAction = userInput.next();
          // While look passes the userAction and cypherMessage to validUserAction action to determine if userAction is a valid option
