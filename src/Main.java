@@ -9,7 +9,6 @@ public class Main {
         UserPrompt userPrompt = new UserPrompt();
         // Assign variable to the returned value from startProgram();
         String returnedMessage = userPrompt.startProgram();
-
         // Output returned value from Encode Decode program
         System.out.printf("outputtedMessage: %s%n", returnedMessage);
     }
