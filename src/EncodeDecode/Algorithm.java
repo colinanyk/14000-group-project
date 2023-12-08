@@ -20,7 +20,7 @@ public class Algorithm {//states class header
          
         
         
-        if (action.equals(cypherMessage.ACTION_ENCODE)) { //if statement for when user had inputted encode
+        if (action.equalsIgnoreCase(cypherMessage.ACTION_ENCODE)) { //if statement for when user had inputted encode
             System.out.println("Encoding Started..."); //lets user know encode has triggered
          
          //encode for loop algorithm process starts here, this shifts the ascii value then re-assigns it back into the same position in the array
@@ -40,7 +40,7 @@ public class Algorithm {//states class header
             cypherMessage.setMessage(encodeStr); //encoded string is thrown to setMessage in cypherMessage class,replacing the string that was just altered.
         }
 
-        if (action.equals(cypherMessage.ACTION_DECODE)) { //Process here for decoding will work similarly as above, just in the opposite order. Triggers when user inputs decode
+        if (action.equalsIgnoreCase(cypherMessage.ACTION_DECODE)) { //Process here for decoding will work similarly as above, just in the opposite order. Triggers when user inputs decode
             System.out.println("Decoding Started..."); //lets user know encode has triggered
              //same jumbling process but the if/else algorithm is altered to undo the jumbling back into the original values so long the same key is inputted
              for (i=0; i < charArray.length ;i++) {
