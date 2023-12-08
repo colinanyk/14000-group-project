@@ -15,7 +15,7 @@ public class UserPrompt {
       // Declare and initialize variable to prompt user to enter message
       String userMessage = userInput.nextLine();
       // Output message to prompt a user to enter a key for the cypher
-      System.out.println("Please enter a integer value cypher key: ");
+      System.out.println("Please enter an integer value cypher key: ");
       // Declare and initialize variable to prompt user to enter cypher key
       int userKey = userInput.nextInt();
       // Declare variable for prompted user action
